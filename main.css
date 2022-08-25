@@ -1,0 +1,191 @@
+head {
+  margin: 0%;
+}
+
+body {
+  margin: 0%;
+}
+
+.background {
+  background-color: rgb(100, 8, 8);
+  width: 20%;
+  height: 100vw;
+}
+
+.background2 {
+  background-color: rgb(189, 69, 69);
+  width: 80%;
+  height: 100vw;
+}
+
+.backgrounall {
+  display: flex;
+  flex: auto;
+}
+
+.bar {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  margin-block: 20px;
+}
+
+/* .bar>.bar1:hover {
+  background-color: rgb(0, 0, 139);
+  width: 20px;
+  transform: rotate(-45deg);
+  margin-bottom: 2px;
+} */
+
+.bar1 {
+  background-color: rgb(0, 255, 183);
+  width: 40px;
+  height: 6px;
+  column-gap: 10px;
+  margin-bottom: 5px;
+  transition: width 0.5s, height 0.5s, transform 0.5s, background-color 0.5s, margin-bottom 0.5s;
+}
+
+.bar2 {
+  background-color: rgb(0, 255, 183);
+  width: 40px;
+  height: 6px;
+  column-gap: 10px;
+  margin-bottom: 5px;
+  transition: background-color 0.5s, width 0.5s;
+}
+
+/* .bar>.bar2:hover {
+  background-color: rgb(0, 0, 139);
+  width: 60px;
+} */
+
+.bar3 {
+  background-color: rgb(0, 255, 183);
+  width: 40px;
+  height: 6px;
+  column-gap: 10px;
+  margin-bottom: 5px;
+  transition: width 0.5s, height 0.5s, transform 0.5s, background-color 0.5s, margin-top 0.5s;
+}
+
+/* .bar>.bar3:hover {
+  background-color: rgb(0, 0, 139);
+  width: 20px;
+  transform: rotate(45deg);
+  margin-bottom: -5px;
+} */
+
+.Icon {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 60px;
+  color: aqua;
+  animation-name: Icon;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.menu-item1 {
+  margin-bottom: 20px;
+}
+
+.menu-item2 {
+  color: aqua;
+  margin-bottom: 20px;
+  animation-name: item2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+@keyframes item2 {
+  0% {
+    color: rgb(100, 8, 8);
+    margin-bottom: 40px
+  }
+
+  50% {
+    color: aqua;
+    margin-bottom: 30px
+  }
+
+  100% {
+    margin-bottom: 20px
+  }
+}
+
+.menu-item3 {
+  color: aqua;
+  margin-bottom: 20px;
+  animation-name: item3;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+@keyframes item3 {
+  0% {
+    color: rgb(100, 8, 8);
+    margin-bottom: 40px;
+  }
+
+  75% {
+    color: aqua;
+    margin-bottom: 30px;
+  }
+
+  100% {
+    margin-bottom: 20px;
+  }
+}
+
+.bar:hover>.bar1 {
+  background-color: rgb(0, 0, 139);
+  width: 20px;
+  transform: rotate(-45deg);
+  margin-bottom: 2px;
+}
+
+.bar:hover>.bar2 {
+  background-color: rgb(0, 0, 139);
+  width: 60px;
+}
+
+.bar:hover>.bar3 {
+  background-color: rgb(0, 0, 139);
+  width: 20px;
+  transform: rotate(45deg);
+  margin-top: -3px;
+}
+.item1 { grid-area: header1;
+         height: max-content;
+        width: max-content;
+      margin-left: 10px; }
+.item2 { grid-area: header2;
+  height: max-content;
+  width: max-content; }
+.item3 { grid-area: right;
+  height: max-content;
+  width: max-content; }
+.item4 { grid-area: main2;
+  height: max-content;
+  width: max-content; }
+.item5 { grid-area: footer;
+  height: max-content;
+  width: max-content; }
+.item6 { grid-area: footer2; 
+  height: max-content;
+  width: max-content;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header1 header1 header1 header2 header2 header2'
+    'right right right main2 main2 main2'
+    'footer footer footer footer footer2 footer2';
+}
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+}
